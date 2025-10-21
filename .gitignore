@@ -1,0 +1,111 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# TensorFlow/PyTorch
+*.h5
+*.pb
+*.ckpt
+*.pth
+*.pt
+checkpoint/
+checkpoints/
+
+# Models (large files)
+models/*.h5
+models/*.pb
+models/*/variables/
+models/*/assets/
+
+# Data
+data/raw/
+data/processed/
+*.csv
+*.json
+*.parquet
+!results/experiment_results.csv
+
+# Logs
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Results/Plots
+*.png
+!data_distribution.png
+!dataset_split.png
+
+# Demo video
+*.mp4
+*.avi
+*.mov
+
+# Temporary files
+*.tmp
+temp/
+tmp/
+
+# Environment variables
+.env
+.env.local
+
+# Cache
+.cache/
+*.cache
+
+# Pytest
+.pytest_cache/
+
+# Coverage
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# Documentation builds
+docs/_build/
+
+# Large dataset files
+*.tar.gz
+*.zip
+*.rar
