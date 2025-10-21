@@ -196,8 +196,8 @@ This project is licensed under the MIT License.
 ## Contact
 
 For questions or collaboration:
-- Email: your.email@example.com
-- GitHub: your-github-username
+- Email: j.niyongabo@alustudent.com
+- GitHub: ngabodev
 
 ---
 
