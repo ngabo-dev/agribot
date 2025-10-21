@@ -1,0 +1,23 @@
+{
+  "dataset_name": "KisanVaani/agriculture-qa-english-only",
+  "source": "https://huggingface.co/datasets/KisanVaani/agriculture-qa-english-only",
+  "download_date": "2025-10-21",
+  "total_examples": 22615,
+  "columns": [
+    "question",
+    "answer"
+  ],
+  "formats_available": [
+    "csv",
+    "json",
+    "parquet"
+  ],
+  "statistics": {
+    "avg_question_length": 53.10758346230378,
+    "avg_answer_length": 151.00287419854078,
+    "min_question_length": 11,
+    "max_question_length": 227,
+    "min_answer_length": 2,
+    "max_answer_length": 2584
+  }
+}
