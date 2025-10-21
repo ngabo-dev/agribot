@@ -84,7 +84,7 @@ agribot/
 
 ### ✅ Dataset Quality & Preprocessing
 - **Status**: COMPLETE
-- Using rajathkumar846/agriculture_faq_qa from Hugging Face
+- Using KisanVaani/agriculture-qa-english-only from Hugging Face (22,615 Q&A pairs)
 - Comprehensive preprocessing:
   - Text cleaning and normalization
   - Duplicate removal

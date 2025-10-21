@@ -100,8 +100,10 @@ Or continue with CPU (training will be slower).
 
 **Solution**: Check internet connection or download manually
 ```python
+```python
+# Example: Load the dataset
 from datasets import load_dataset
-dataset = load_dataset("rajathkumar846/agriculture_faq_qa")
+dataset = load_dataset("KisanVaani/agriculture-qa-english-only")
 ```
 
 ### Issue: Model loading fails

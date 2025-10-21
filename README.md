@@ -15,19 +15,39 @@ Agriculture is the backbone of Rwanda's economy, with over 70% of the population
 
 ## Dataset
 
-**Source**: [rajathkumar846/agriculture_faq_qa](https://huggingface.co/datasets/rajathkumar846/agriculture_faq_qa)
+**Source**: [KisanVaani/agriculture-qa-english-only](https://huggingface.co/datasets/KisanVaani/agriculture-qa-english-only)
 
 The dataset contains question-answer pairs covering:
 - Crop diseases and prevention
 - Pest management
 - Fertilizer recommendations
 - Planting schedules
+- Soil management and crop rotation
 - General agricultural practices
 
 **Dataset Statistics**:
-- Total Q&A pairs: ~1000+ (will be updated after loading)
+- Total Q&A pairs: **22,615 examples**
+- Language: English
 - Domain: Agriculture
 - Format: Question-Answer pairs
+- Quality: Clean, well-structured agricultural knowledge
+- **Available locally**: Yes (in `data/` folder for faster loading)
+
+### 📥 Local Dataset (Faster Training)
+
+The dataset is pre-downloaded in the `data/` folder for offline access:
+- `data/agriculture_qa.parquet` - 348 KB (recommended, fastest)
+- `data/agriculture_qa.csv` - 4.5 MB (portable)
+- `data/agriculture_qa.json` - 5.4 MB (structured)
+
+**Benefits**: 15-20x faster loading, offline access, reproducible results.
+
+To re-download or update:
+```bash
+python download_dataset.py
+```
+
+See [LOCAL_DATASET_GUIDE.md](LOCAL_DATASET_GUIDE.md) for details.
 
 ## Model Architecture
 
@@ -188,7 +208,7 @@ This project is licensed under the MIT License.
 
 ## Acknowledgments
 
-- Dataset: [rajathkumar846/agriculture_faq_qa](https://huggingface.co/datasets/rajathkumar846/agriculture_faq_qa)
+- Dataset: [KisanVaani/agriculture-qa-english-only](https://huggingface.co/datasets/KisanVaani/agriculture-qa-english-only)
 - Hugging Face Transformers library
 - TensorFlow team
 - Rwanda Agriculture Board for domain expertise
