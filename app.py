@@ -15,13 +15,12 @@ Requirements:
 
 import os
 import gradio as gr
-import tensorflow as tf
-from transformers import T5Tokenizer, TFT5ForConditionalGeneration
+from transformers import T5Tokenizer, T5ForConditionalGeneration
 import warnings
 warnings.filterwarnings('ignore')
 
 # Configuration
-MODEL_PATH = "models/baseline_model"  # Change to your best model path
+MODEL_PATH = "models/baseline_final"  # Use the saved final model
 MAX_INPUT_LENGTH = 128
 MAX_OUTPUT_LENGTH = 256
 
@@ -39,14 +38,14 @@ try:
         MODEL_PATH = "t5-small"
     
     tokenizer = T5Tokenizer.from_pretrained(MODEL_PATH)
-    model = TFT5ForConditionalGeneration.from_pretrained(MODEL_PATH)
+    model = T5ForConditionalGeneration.from_pretrained(MODEL_PATH, use_safetensors=True)
     print("✅ Model and tokenizer loaded successfully!")
     
 except Exception as e:
     print(f"❌ Error loading model: {e}")
     print("Loading fallback model (t5-small)...")
     tokenizer = T5Tokenizer.from_pretrained("t5-small")
-    model = TFT5ForConditionalGeneration.from_pretrained("t5-small")
+    model = T5ForConditionalGeneration.from_pretrained("t5-small", use_safetensors=True)
     print("⚠️ Using untrained model. Results may not be optimal.")
 
 def generate_answer(question):
@@ -69,7 +68,7 @@ def generate_answer(question):
             max_length=MAX_INPUT_LENGTH,
             padding='max_length',
             truncation=True,
-            return_tensors='tf'
+            return_tensors='pt'
         )
         
         # Generate
@@ -158,10 +157,6 @@ demo = gr.ChatInterface(
         secondary_hue="emerald",
     ),
     css=custom_css,
-    retry_btn="🔄 Retry",
-    undo_btn="↩️ Undo",
-    clear_btn="🗑️ Clear Chat",
-    submit_btn="Send 📤",
     chatbot=gr.Chatbot(
         height=500,
         show_label=False,
